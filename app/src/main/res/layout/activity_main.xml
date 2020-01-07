@@ -7,9 +7,11 @@
     android:fillViewport="true"
     tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/canvas"
+        >
 
         <!--Деревянная стена, добавляется в самом конце -->
 
@@ -52,7 +54,7 @@
             app:layout_constraintWidth_percent="0.2" />
 
         <ImageView
-            android:id="@+id/left_window"
+            android:id="@+id/leftWindow"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
@@ -63,7 +65,7 @@
             app:layout_constraintWidth_percent="0.15" />
 
         <ImageView
-            android:id="@+id/right_window"
+            android:id="@+id/rightWindow"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
@@ -76,6 +78,7 @@
         <!--Второй этаж -->
 
         <ImageView
+            android:visibility="gone"
             android:id="@+id/window2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -88,7 +91,7 @@
             app:layout_constraintWidth_percent="0.15" />
 
         <ImageView
-            android:id="@+id/left_window2"
+            android:id="@+id/leftWindow2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
@@ -100,7 +103,7 @@
             app:layout_constraintWidth_percent="0.15" />
 
         <ImageView
-            android:id="@+id/right_window2"
+            android:id="@+id/rightWindow2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
@@ -113,6 +116,7 @@
         <!--Третий этаж -->
 
         <ImageView
+            android:visibility="gone"
             android:id="@+id/window3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -125,7 +129,7 @@
             app:layout_constraintWidth_percent="0.15" />
 
         <ImageView
-            android:id="@+id/left_window3"
+            android:id="@+id/leftWindow3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
@@ -137,7 +141,7 @@
             app:layout_constraintWidth_percent="0.15" />
 
         <ImageView
-            android:id="@+id/right_window3"
+            android:id="@+id/rightWindow3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
@@ -162,7 +166,7 @@
             app:srcCompat="@drawable/roof" />
 
         <ImageView
-            android:id="@+id/roof_window"
+            android:id="@+id/roofWindow"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
@@ -212,5 +216,28 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.75" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- ToolBox -->
+        <include
+            android:id="@+id/toolbox"
+            layout="@layout/toolbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Кнопка отображения ToolBox -->
+        <ImageView
+            android:id="@+id/settings"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:src="@drawable/settings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
