@@ -11,6 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!--Деревянная стена, добавляется в самом конце -->
+
         <TextView
             android:id="@+id/wall"
             android:layout_width="0dp"
@@ -21,29 +23,7 @@
             app:layout_constraintStart_toStartOf="@+id/bricks"
             app:layout_constraintTop_toTopOf="@+id/window3" />
 
-        <ImageView
-            android:id="@+id/right_window2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:src="@drawable/window"
-            app:layout_constraintEnd_toStartOf="@+id/guideline"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toTopOf="@+id/window2"
-            app:layout_constraintWidth_percent="0.15" />
-
-        <ImageView
-            android:id="@+id/left_window2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:src="@drawable/window"
-            app:layout_constraintEnd_toStartOf="@+id/guideline2"
-            app:layout_constraintHorizontal_bias="0.507"
-            app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toTopOf="@+id/window2"
-            app:layout_constraintWidth_percent="0.15" />
-
+        <!--Кирпичная облицовка -->
 
         <TextView
             android:id="@+id/bricks"
@@ -55,6 +35,8 @@
             app:layout_constraintHeight_percent="0.1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintWidth_percent="0.7" />
+
+        <!--Первый этаж -->
 
         <ImageView
             android:id="@+id/door"
@@ -81,6 +63,56 @@
             app:layout_constraintWidth_percent="0.15" />
 
         <ImageView
+            android:id="@+id/right_window"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/window"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="@+id/door"
+            app:layout_constraintWidth_percent="0.15" />
+
+        <!--Второй этаж -->
+
+        <ImageView
+            android:id="@+id/window2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/window"
+            app:layout_constraintBottom_toTopOf="@+id/door"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.15" />
+
+        <ImageView
+            android:id="@+id/left_window2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/window"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="@+id/window2"
+            app:layout_constraintWidth_percent="0.15" />
+
+        <ImageView
+            android:id="@+id/right_window2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/window"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/window2"
+            app:layout_constraintWidth_percent="0.15" />
+
+        <!--Третий этаж -->
+
+        <ImageView
             android:id="@+id/window3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -90,17 +122,6 @@
             app:layout_constraintBottom_toTopOf="@+id/window2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintWidth_percent="0.15" />
-
-        <ImageView
-            android:id="@+id/right_window"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:src="@drawable/window"
-            app:layout_constraintEnd_toStartOf="@+id/guideline2"
-            app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toTopOf="@+id/door"
             app:layout_constraintWidth_percent="0.15" />
 
         <ImageView
@@ -127,33 +148,7 @@
             app:layout_constraintTop_toTopOf="@+id/window3"
             app:layout_constraintWidth_percent="0.15" />
 
-
-        <ImageView
-            android:id="@+id/window2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="60dp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/window"
-            app:layout_constraintBottom_toTopOf="@+id/door"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintWidth_percent="0.15" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.25" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.75" />
-
+        <!--Крыша с окном -->
 
         <ImageView
             android:id="@+id/roof"
@@ -180,6 +175,8 @@
             app:layout_constraintVertical_bias="0.6"
             app:layout_constraintWidth_percent="0.20" />
 
+        <!--Дерево и трава -->
+
         <ImageView
             android:id="@+id/tree"
             android:layout_width="wrap_content"
@@ -198,5 +195,22 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/grass_texture" />
+
+        <!--Направляющие -->
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.75" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
